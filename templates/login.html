@@ -3,12 +3,13 @@
 <html>
   <head>
     <title>Login</title>
+    {% from 'bootstrap4/form.html' import render_form %}
   </head>
   <body>
     <div class="container">
       <h1>Signup </h1> 
-      
-      <form method="POST" action="/login">
+      {{ render_form(form,form_type='form-inline') }}
+      <!-- <form method="POST" action="/login">
         {{ form.csrf_token }} 
         {{ form.username.label }} <br> {{ form.username(size=20) }}
         {% if form.username.errors %}
@@ -27,7 +28,7 @@
        
        <br>
         <input type="submit" value="Submit" />
-      </form>
+      </form> -->
     </div>
   </body>
 </html>
