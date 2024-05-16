@@ -8,7 +8,7 @@
     <div class="container">
       <h1>Signup </h1> 
       
-      <form method="POST" action="/">
+      <form method="POST" action="/login">
         {{ form.csrf_token }} 
         {{ form.username.label }} <br> {{ form.username(size=20) }}
         {% if form.username.errors %}
